@@ -9,57 +9,91 @@ body {
     align-items: center;
     height: 100vh; /* Full viewport height */
     flex-direction: column;
+    text-align: center;
 }
 
-/* Centering the header */
+/* Full-screen section styles */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Each section takes up full screen */
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* Header Section */
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 48px;  /* Adjusting size for header */
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 22px;  /* Adjusting size for subtitle */
     color: #777;
 }
 
 /* Box container styles */
 .boxes-container {
     display: flex;
-    flex-direction: column; /* Stack boxes vertically */
-    align-items: center;
+    flex-direction: column;  /* Arrange boxes vertically */
     justify-content: center;
+    align-items: center;
+    gap: 15px;  /* Control the spacing between boxes */
+    width: 100%;
+    max-width: 1100px; /* Limit max width */
+    margin-top: 30px;
 }
 
+/* Box styles */
 .box {
     background-color: white;
     padding: 20px;
-    margin: 15px 0; /* Vertical spacing between boxes */
-    border-radius: 10px;
+    border-radius: 15px;  /* Rounded corners */
     box-shadow: 2px 2px 7px 1px #1C6EA4; /* Blue shadow */
-    width: 80%; /* Make boxes smaller */
+    width: 125px;  /* Width reduced to half of previous size */
+    height: 150px;  /* Adjust height to maintain balance */
     text-align: center;
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .box h2 {
-    font-size: 24px;
+    font-size: 22px;  /* Smaller font size for titles */
     color: #333;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .box a {
     text-decoration: none;
     color: inherit;
-    font-size: 18px;
+    font-size: 16px;  /* Smaller font size for the links */
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .box:hover {
     transform: scale(1.05); /* Slight zoom effect */
     cursor: pointer;
+    box-shadow: 3px 3px 12px 2px #1C6EA4; /* Darker shadow on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .boxes-container {
+        flex-direction: column; /* Stack boxes vertically on small screens */
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;  /* Make boxes take up more space on mobile */
+        height: 130px;  /* Adjust height for mobile */
+    }
 }
