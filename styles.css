@@ -1,17 +1,26 @@
-body { 
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    background-color: #D0E4F5;
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif; /* Clean font */
+    background-color: #D0E4F5; /* Light Blue Background */
     margin: 0;
-    padding: 20;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    flex-direction: column;
 }
+
+/* Centering the header */
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 header h1 {
     font-size: 36px;
     color: #333;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -22,32 +31,35 @@ header p {
 /* Box container styles */
 .boxes-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center;
+    justify-content: center;
 }
 
 .box {
     background-color: white;
     padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 7px 1px #1C6EA4; /* Updated box shadow */
-    width: 45%;
+    margin: 15px 0; /* Vertical spacing between boxes */
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px 1px #1C6EA4; /* Blue shadow */
+    width: 80%; /* Make boxes smaller */
     text-align: center;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 .box h2 {
     font-size: 24px;
     color: #333;
+    margin: 0; /* Remove default margin */
 }
 
 .box a {
     text-decoration: none;
     color: inherit;
+    font-size: 18px;
 }
 
 .box:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect */
     cursor: pointer;
 }
