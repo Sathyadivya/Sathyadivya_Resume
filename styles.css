@@ -1,0 +1,53 @@
+body { 
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #D0E4F5;
+    margin: 0;
+    padding: 20;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+header p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Box container styles */
+.boxes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px 1px #1C6EA4; /* Updated box shadow */
+    width: 45%;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
